@@ -13,6 +13,7 @@ export default defineConfig({
         }),
         react(),
         tailwindcss(),
+        
     ],
     esbuild: {
         jsx: 'automatic',
@@ -22,4 +23,7 @@ export default defineConfig({
             'ziggy-js': resolve(__dirname, 'vendor/tightenco/ziggy'),
         },
     },
+    optimizeDeps: {
+    include: ['framer-motion'],
+    }
 });
